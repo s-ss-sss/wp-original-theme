@@ -1,0 +1,22 @@
+@use '../foundation/variables' as *;
+
+.l-main {
+	overflow: hidden;
+}
+
+.l-inner {
+	max-width: $inner-width-lg;
+	margin-inline: auto;
+
+	@media (max-width: $breakpoint-sp) {
+		padding-inline: $inner-padding;
+	}
+}
+
+.l-inner--sm {
+	max-width: $inner-width-sm;
+}
+
+.l-inner--md {
+	max-width: $inner-width-md;
+}

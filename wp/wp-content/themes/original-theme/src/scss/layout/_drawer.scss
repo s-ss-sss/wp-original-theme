@@ -1,0 +1,50 @@
+@use "../foundation/variables" as *;
+
+body.is-drawer-open {
+	overflow: hidden;
+
+	.l-drawer {
+		visibility: visible;
+		opacity: 1;
+	}
+}
+
+.l-drawer {
+	position: fixed;
+	inset: 0;
+	z-index: 90;
+	visibility: hidden;
+	background: linear-gradient(rgb(0 0 0 / 50%), rgb(0 0 0 / 50%)),
+	url("../img/bg_01.webp") right top / cover no-repeat;
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.l-drawer__inner {
+	height: 100%;
+	padding-block: $header-height 30px;
+	padding-inline: 30px;
+	overflow-y: auto;
+	overscroll-behavior: contain;
+}
+
+.l-drawer__list {
+	display: flex;
+	flex-direction: column;
+	gap: $space-lg;
+}
+
+.l-drawer__item {
+	a {
+		font-family: $font-display;
+		font-size: $font-size-xl;
+		line-height: 1;
+		color: $color-white;
+	}
+}
+
+.l-drawer__item--contact {
+	.c-button {
+		font-size: $font-size-lg;
+	}
+}

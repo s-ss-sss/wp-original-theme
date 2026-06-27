@@ -1,0 +1,101 @@
+@use "../foundation/variables" as *;
+
+.p-works__list--single {
+	display: flex;
+	justify-content: center;
+}
+
+.p-works__slide {
+	width: 100%;
+	max-width: 800px;
+
+	@media (max-width: $breakpoint-sp) {
+		width: 80%;
+	}
+}
+
+.p-works__image {
+	img {
+		width: 100%;
+		opacity: 1;
+		transform: scale(1);
+		transition: opacity 0.5s,
+		transform 0.5s;
+	}
+}
+
+.js-works-slider {
+	.p-works__image {
+		img {
+			opacity: 0.3;
+			transform: scale(0.8);
+		}
+	}
+
+	.swiper-slide-active {
+		.p-works__image {
+			img {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
+	}
+}
+
+.p-works__pagination {
+	--progress-duration: 3s;
+	--swiper-pagination-bullet-horizontal-gap: 0px;
+
+	position: static;
+	display: flex;
+	gap: $space-sm;
+	justify-content: center;
+	max-width: 800px;
+	margin-block-start: 50px;
+	margin-inline: auto;
+
+	@media (max-width: $breakpoint-sp) {
+		gap: $space-xs;
+		padding-inline: $inner-padding;
+	}
+
+	.swiper-pagination-bullet {
+		position: relative;
+		flex: 1 1 100px;
+		max-width: 100px;
+		height: 5px;
+		overflow: hidden;
+		background-color: $color-gray-200;
+		border-radius: 0;
+		opacity: 1;
+
+		@media (max-width: $breakpoint-sp) {
+			max-width: none;
+			height: 3px;
+		}
+	}
+
+	.swiper-pagination-bullet-active {
+		background-color: $color-gray-200;
+
+		.p-works__pagination-bar {
+			animation: progress-fill var(--progress-duration) linear forwards;
+		}
+	}
+}
+
+.p-works__pagination-bar {
+	position: absolute;
+	inset-block: 0;
+	inset-inline-start: 0;
+	width: 100%;
+	background: $gradient-blue-2tone;
+	transform: scaleX(0);
+	transform-origin: left center;
+}
+
+@keyframes progress-fill {
+	to {
+		transform: scaleX(1);
+	}
+}

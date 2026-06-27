@@ -1,0 +1,60 @@
+@use "../foundation/variables" as *;
+
+.c-section-head {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+	margin-block-end: 60px;
+	text-align: center;
+
+	@media (max-width: $breakpoint-sp) {
+		margin-block-end: 30px;
+	}
+}
+
+.c-section-head__title {
+	color: $color-blue-900;
+}
+
+.c-section-head__title-main {
+	display: block;
+	margin-block-end: 5px;
+	font-family: $font-display;
+	font-size: 66px;
+	font-weight: normal;
+	line-height: 1;
+
+	@media (max-width: $breakpoint-sp) {
+		font-size: 45px;
+	}
+}
+
+.c-section-head__title-sub {
+	display: block;
+	font-size: $font-size-lg;
+	line-height: 1.5;
+
+	@media (max-width: $breakpoint-sp) {
+		font-size: $font-size-sm;
+	}
+}
+
+.c-section-head__intro {
+	font-weight: bold;
+	line-height: 1.5;
+
+	&::before {
+		display: block;
+		width: 30px;
+		height: 5px;
+		margin-block-end: 20px;
+		margin-inline: auto;
+		content: "";
+		background: $gradient-blue-2tone;
+
+		@media (max-width: $breakpoint-sp) {
+			width: 20px;
+		}
+	}
+}

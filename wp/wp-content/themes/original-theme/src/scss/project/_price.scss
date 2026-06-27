@@ -1,0 +1,162 @@
+@use '../foundation/variables' as *;
+
+.p-price__list {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	gap: $space-lg;
+
+	@media (max-width: $breakpoint-sp) {
+		grid-template-columns: 1fr;
+	}
+}
+
+.p-price__item {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	padding: $space-lg;
+	background-color: $color-white;
+	box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+
+	@media (max-width: $breakpoint-sp) {
+		padding: $space-md;
+	}
+}
+
+.p-price__item--pickup {
+	box-shadow: 0 0 0 12px rgb(55 187 205 / 10%);
+}
+
+.p-price__plan {
+	margin-block-end: 20px;
+	font-size: $font-size-sm;
+	line-height: 1;
+	text-align: center;
+}
+
+.p-price__plan-en {
+	display: block;
+	margin-block-end: 5px;
+	font-family: $font-display;
+	font-size: 45px;
+	font-weight: normal;
+
+	@media (max-width: $breakpoint-sp) {
+		font-size: $font-size-xxl;
+	}
+}
+
+.p-price__plan-ja {
+	display: block;
+}
+
+.p-price__price {
+	margin-block-end: $space-md;
+	line-height: 1;
+	text-align: center;
+}
+
+.p-price__price-number {
+	display: inline-block;
+	font-family: $font-display;
+	font-size: 66px;
+
+	@media (max-width: $breakpoint-sp) {
+		font-size: 50px;
+	}
+}
+
+.p-price__features {
+	display: flex;
+	flex-direction: column;
+	gap: $space-sm;
+}
+
+.p-price__feature {
+	position: relative;
+	padding-inline-start: $space-lg;
+	line-height: 1.5;
+
+	&::before {
+		position: absolute;
+		top: 2px;
+		left: 0;
+		width: 20px;
+		height: 20px;
+		content: "";
+		background-color: $color-blue-900;
+	}
+
+	&::after {
+		position: absolute;
+		top: 7px;
+		left: 4px;
+		width: 12px;
+		height: 7px;
+		content: "";
+		border-bottom: 2px solid $color-white;
+		border-left: 2px solid $color-white;
+		transform: rotate(-45deg);
+	}
+}
+
+.p-price__feature--disabled {
+	color: $color-gray-500;
+
+	&::before {
+		background: $color-gray-200;
+	}
+
+	&::after {
+		display: none;
+	}
+}
+
+.p-price__button {
+	margin-block-start: $space-lg;
+}
+
+.p-price__ribbon {
+	position: absolute;
+	top: -5px;
+	left: -5px;
+	width: 77px;
+	height: 77px;
+	margin: 0;
+	overflow: hidden;
+
+	span {
+		position: absolute;
+		top: 10px;
+		left: -50px;
+		display: inline-block;
+		width: 150px;
+		padding-block: 10px 5px;
+		font-family: $font-display;
+		font-size: 18px;
+		line-height: 1;
+		color: $color-white;
+		text-align: center;
+		background: $gradient-blue-2tone;
+		box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+		transform: rotate(-45deg);
+
+		&::before,
+		&::after {
+			position: absolute;
+			bottom: -4px;
+			content: "";
+			border-top: 4px solid $color-blue-900;
+			border-right: 4px solid transparent;
+			border-left: 4px solid transparent;
+		}
+
+		&::before {
+			left: 22px;
+		}
+
+		&::after {
+			right: 19px;
+		}
+	}
+}

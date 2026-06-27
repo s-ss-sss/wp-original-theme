@@ -1,0 +1,68 @@
+/**
+ * Font
+ */
+$font-base: "Hiragino Sans", "Yu Gothic", sans-serif;
+$font-mincho: "Yu Mincho", serif;
+$font-display: "AlternateGothicEF NoTwo", sans-serif;
+$font-size-xs: 0.75rem; // 12px
+$font-size-sm: 0.875rem; // 14px
+$font-size-base: 1rem; // 16px
+$font-size-md: 1.125rem; // 18px
+$font-size-lg: 1.25rem; // 20px
+$font-size-xl: 1.5rem; // 24px
+$font-size-xxl: 2rem; // 32px
+
+/**
+ * Color
+ */
+$color-white: #fff;
+$color-black: #000;
+$color-red: #d60603;
+$color-gray-50: #f5f9fa;
+$color-gray-200: #eee;
+$color-gray-500: #888;
+$color-gray-700: #525d5e;
+$color-blue-100: #cbe7ea;
+$color-blue-300: #3ed2e6;
+$color-blue-500: #28adc9;
+$color-blue-600: #2c97d0;
+$color-blue-700: #4a7085;
+$color-blue-900: #043956;
+$gradient-blue-2tone: linear-gradient(
+		90deg,
+		$color-blue-300,
+		$color-blue-600
+);
+$gradient-blue-3tone: linear-gradient(
+		90deg,
+		$color-blue-300 0%,
+		$color-blue-600 50%,
+		$color-blue-300 100%
+);
+
+/**
+ * Spacing
+ */
+$space-xs: 0.5rem; // 8px
+$space-sm: 1rem; // 16px
+$space-md: 1.5rem; // 24px
+$space-lg: 2rem; // 32px
+$space-xl: 3rem; // 48px
+$space-xxl: 4rem; // 64px
+$space-section: 100px;
+$space-section-sp: 50px;
+
+/**
+ * Layout
+ */
+$inner-width-sm: 620px;
+$inner-width-md: 900px;
+$inner-width-lg: 1100px;
+$inner-padding: 20px;
+$header-height: 85px;
+$header-height-sp: 65px;
+
+/**
+ * Breakpoint
+ */
+$breakpoint-sp: 768px;

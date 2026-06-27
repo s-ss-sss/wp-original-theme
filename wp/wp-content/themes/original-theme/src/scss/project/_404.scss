@@ -1,0 +1,50 @@
+@use '../foundation/variables' as *;
+
+.page-404 {
+	min-height: 100vh;
+	background-color: $color-gray-50;
+}
+
+.p-404 {
+	padding-block: 100px;
+	text-align: center;
+
+	@media (max-width: $breakpoint-sp) {
+		padding-block: 50px;
+	}
+}
+
+.p-404__title {
+	margin-block-end: $space-lg;
+	font-family: $font-display;
+	font-size: 66px;
+	font-weight: normal;
+	line-height: 1;
+	color: $color-blue-900;
+
+	@media (max-width: $breakpoint-sp) {
+		margin-block-end: $space-md;
+		font-size: 45px;
+	}
+}
+
+.p-404__intro {
+	padding: $inner-padding;
+	line-height: 2;
+	border: 3px double currentcolor;
+
+	@media (max-width: $breakpoint-sp) {
+		padding: 10px;
+	}
+}
+
+.p-404__button {
+	width: 300px;
+	margin-block-start: 50px;
+	margin-inline: auto;
+	font-weight: bold;
+
+	@media (max-width: $breakpoint-sp) {
+		width: 100%;
+	}
+}

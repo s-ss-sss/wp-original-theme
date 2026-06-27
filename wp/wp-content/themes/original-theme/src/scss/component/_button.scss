@@ -1,0 +1,28 @@
+@use '../foundation/variables' as *;
+
+.c-button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: 20px;
+	line-height: 1;
+	color: $color-white;
+	text-align: center;
+	cursor: pointer;
+	background: $gradient-blue-3tone;
+	background-size: 200% auto;
+	border: 0;
+	border-radius: 30px;
+	transition: background-position 0.3s;
+
+	&:hover {
+		background-position: 100%;
+	}
+}
+
+.c-button--ghost {
+	color: $color-blue-900;
+	background: none;
+	border: solid 1px $color-blue-900;
+}

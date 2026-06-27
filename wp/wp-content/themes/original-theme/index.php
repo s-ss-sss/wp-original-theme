@@ -1,0 +1,5 @@
+<?php
+
+/**
+ * Fallback template.
+ */

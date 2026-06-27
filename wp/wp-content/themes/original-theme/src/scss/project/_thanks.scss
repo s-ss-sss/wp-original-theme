@@ -1,0 +1,53 @@
+@use "../foundation/variables" as *;
+
+.page-thanks {
+	min-height: 100vh;
+	background-color: $color-blue-700;
+}
+
+.p-thanks {
+	padding-block: 100px;
+	text-align: center;
+
+	@media (max-width: $breakpoint-sp) {
+		padding-block: 50px;
+	}
+}
+
+.p-thanks__title {
+	margin-block-end: $space-lg;
+	font-size: $font-size-xxl;
+	color: $color-blue-900;
+
+	@media (max-width: $breakpoint-sp) {
+		margin-block-end: $space-md;
+		font-size: $font-size-lg;
+	}
+}
+
+.p-thanks__intro {
+	padding: $inner-padding;
+	margin-block-end: $space-lg;
+	line-height: 2;
+	border: 3px double currentcolor;
+
+	@media (max-width: $breakpoint-sp) {
+		padding: 10px;
+		margin-block-end: $space-md;
+	}
+}
+
+.p-thanks__description {
+	line-height: 2;
+}
+
+.p-thanks__button {
+	width: 300px;
+	margin-block-start: 50px;
+	margin-inline: auto;
+	font-weight: bold;
+
+	@media (max-width: $breakpoint-sp) {
+		width: 100%;
+	}
+}

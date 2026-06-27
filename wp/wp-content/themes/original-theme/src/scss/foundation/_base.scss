@@ -1,0 +1,53 @@
+@use "../foundation/variables" as *;
+
+@font-face {
+	font-family: "AlternateGothicEF NoTwo";
+	font-style: normal;
+	font-weight: 400;
+	src: url("../font/AlternateGothicEFNoTwo.woff2") format("woff2"),
+	url("../font/AlternateGothicEFNoTwo.woff") format("woff");
+	font-display: swap;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: $header-height;
+
+	@media (max-width: $breakpoint-sp) {
+		scroll-padding-top: $header-height-sp;
+	}
+}
+
+body {
+	min-width: $inner-width-lg;
+	font-family: sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.8;
+	color: $color-gray-700;
+	background-color: $color-white;
+
+	@media (max-width: $breakpoint-sp) {
+		min-width: 100%;
+		font-size: $font-size-sm;
+	}
+
+	&.is-drawer-open {
+		overflow: hidden;
+	}
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+button {
+	cursor: pointer;
+}

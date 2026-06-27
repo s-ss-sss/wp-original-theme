@@ -1,0 +1,147 @@
+@use '../foundation/variables' as *;
+
+@media (max-width: $breakpoint-sp) {
+	.p-flow__header {
+		margin-block-end: 60px;
+	}
+}
+
+.p-flow__list {
+	--row-gap: 75px;
+	--column-gap: 50px;
+
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--row-gap) var(--column-gap);
+	justify-content: center;
+	text-align: center;
+
+	@media (max-width: $breakpoint-sp) {
+		--column-gap: 0;
+
+		flex-flow: column nowrap;
+		gap: var(--row-gap);
+	}
+}
+
+.p-flow__item {
+	position: relative;
+	width: calc((100% - var(--column-gap) * 2) / 3);
+	padding-block-end: 30px;
+	padding-inline: 30px;
+	background-color: $color-white;
+	box-shadow: 0 0 15px rgba($color-black, 0.2);
+
+	@media (max-width: $breakpoint-sp) {
+		width: 100%;
+	}
+
+	&:not(:nth-child(3n), :last-child)::after {
+		position: absolute;
+		top: 50%;
+		right: calc(var(--column-gap) * -0.5);
+		width: 0;
+		height: 0;
+		content: "";
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent;
+		border-left: 15px solid $color-blue-700;
+		transform: translate(50%, -50%);
+
+		@media (max-width: $breakpoint-sp) {
+			content: none;
+		}
+	}
+
+	@media (max-width: $breakpoint-sp) {
+		&:not(:last-child)::after {
+			position: absolute;
+			inset: auto 0 -30px;
+			width: 0;
+			height: 0;
+			margin-inline: auto;
+			content: "";
+			border-top: 10px solid $color-blue-700;
+			border-right: 10px solid transparent;
+			border-bottom: none;
+			border-left: 10px solid transparent;
+			transform: none;
+		}
+	}
+}
+
+.p-flow__step {
+	position: relative;
+	top: -25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	margin-inline: auto;
+	font-family: $font-display;
+	font-size: $font-size-sm;
+	line-height: 1;
+	color: $color-white;
+	background: $gradient-blue-2tone;
+	border-radius: 50%;
+	box-shadow: 0 0 0 12px rgb(55 187 205 / 10%);
+
+	&::before,
+	&::after {
+		position: absolute;
+		inset: -15%;
+		content: "";
+		border: 1px solid $color-blue-700;
+		border-radius: 50%;
+		animation: flow-circle 1s linear infinite;
+	}
+
+	&::before {
+		animation-delay: 0.5s;
+	}
+}
+
+.p-flow__step-number {
+	font-size: 24px;
+}
+
+.p-flow__heading {
+	margin-block-end: $space-md;
+	font-size: $font-size-lg;
+	line-height: 1;
+
+	@media (max-width: $breakpoint-sp) {
+		margin-block-end: $space-sm;
+		font-size: $font-size-base;
+	}
+}
+
+.p-flow__icon {
+	margin-block-end: $space-md;
+
+	@media (max-width: $breakpoint-sp) {
+		margin-block-end: $space-sm;
+	}
+
+	img {
+		width: 50px;
+		margin-inline: auto;
+	}
+}
+
+.p-flow__description {
+	line-height: 2;
+}
+
+@keyframes flow-circle {
+	0% {
+		transform: scale(0.68);
+	}
+
+	100% {
+		opacity: 0;
+		transform: scale(1.2);
+	}
+}

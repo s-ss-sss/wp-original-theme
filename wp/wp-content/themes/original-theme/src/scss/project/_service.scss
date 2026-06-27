@@ -1,0 +1,106 @@
+@use '../foundation/variables' as *;
+
+.p-service__list {
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+
+	@media (max-width: $breakpoint-sp) {
+		gap: 40px;
+	}
+}
+
+.p-service__item {
+	position: relative;
+	min-height: 450px;
+
+	@media (max-width: $breakpoint-sp) {
+		min-height: auto;
+	}
+}
+
+.p-service__item--image-right {
+	.p-service__image {
+		left: 50%;
+	}
+
+	.p-service__content {
+		padding-inline-end: 100px;
+
+		@media (max-width: $breakpoint-sp) {
+			padding-inline-end: 0;
+		}
+	}
+}
+
+.p-service__item--image-left {
+	.p-service__image {
+		right: 50%;
+	}
+
+	.p-service__content {
+		padding-inline-start: 100px;
+		margin-inline-start: auto;
+
+		@media (max-width: $breakpoint-sp) {
+			padding-inline-start: 0;
+		}
+	}
+}
+
+.p-service__image {
+	position: absolute;
+	top: 0;
+	width: 800px;
+	margin: 0;
+
+	@media (max-width: $breakpoint-sp) {
+		position: static;
+		width: 100%;
+		margin-block-end: 20px;
+	}
+}
+
+.p-service__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	min-height: 450px;
+
+	@media (max-width: $breakpoint-sp) {
+		width: 100%;
+		min-height: auto;
+	}
+}
+
+.p-service__heading {
+	margin-block-end: 30px;
+	font-size: 20px;
+	line-height: 1;
+
+	@media (max-width: $breakpoint-sp) {
+		margin-block-end: 15px;
+		font-size: $font-size-base;
+	}
+}
+
+.p-service__heading-en {
+	display: block;
+	margin-block-end: 10px;
+	font-family: $font-display;
+	font-size: 45px;
+	font-weight: normal;
+
+	@media (max-width: $breakpoint-sp) {
+		font-size: $font-size-xxl;
+	}
+}
+
+.p-service__heading-ja {
+	display: block;
+}
+
+.p-service__description {
+	line-height: 2;
+}

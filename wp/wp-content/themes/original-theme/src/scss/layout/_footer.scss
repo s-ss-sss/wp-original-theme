@@ -1,0 +1,17 @@
+@use "../foundation/variables" as *;
+
+.l-footer {
+	padding: $space-lg $inner-padding;
+	text-align: center;
+	background-color: $color-blue-700;
+}
+
+.l-footer__copyright {
+	display: block;
+	font-family: $font-display;
+	font-size: $font-size-xs;
+	line-height: 1;
+	color: $color-white;
+	letter-spacing: 1px;
+	transform: translateY(3px);
+}

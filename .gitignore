@@ -1,0 +1,14 @@
+# Environment
+.env
+
+# Node.js
+node_modules/
+
+# Notes
+.info.md
+
+# IDE
+.idea/
+
+# Mac
+.DS_Store

@@ -1,0 +1,31 @@
+@use '../foundation/variables' as *;
+
+.u-section {
+	padding-block: $space-section;
+
+	@media (max-width: $breakpoint-sp) {
+		padding-block: $space-section-sp;
+	}
+}
+
+.u-bg-surface {
+	background-color: $color-white;
+}
+
+.u-bg-surface-alt {
+	background-color: $color-gray-50;
+}
+
+.u-br-sp {
+	display: none;
+
+	@media (max-width: $breakpoint-sp) {
+		display: inline;
+	}
+}
+
+.u-br-pc {
+	@media (max-width: $breakpoint-sp) {
+		display: none;
+	}
+}

@@ -1,5 +1,4 @@
 # WordPressオリジナルテーマ（WordPress Original Theme）
-
 ![Screenshot](./wp/wp-content/themes/original-theme/screenshot.png)
 
 ## Overview
